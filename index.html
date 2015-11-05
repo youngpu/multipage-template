@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 
-<!-- Add angular route library here -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
-
+<!-- Add ui-router library here -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 
 <script src="js/app.js"></script>
 <link href = "css/app.css" rel="stylesheet" type = "text/css"/>
@@ -19,23 +18,23 @@
   <div class="container">
     <div class="header">
         <h1>This is the header -- it'll stick around</h1>
-        
+        <a ui-sref="landing"><button type="button" class="btn btn-default">Home</button></a>
         <div class="btn-group btn-group-justified" role="group" aria-label="...">
 		  <div class="btn-group" role="group">
-		    <a href="#/"><button type="button" class="btn btn-default">Home</button></a>
+		    
 		  </div>
 		  <div class="btn-group" role="group">
-		    <a href="#/content"><button type="button" class="btn btn-default">Content</button></a>
+		    <a class="btn btn-default" ui-sref="content" >Content</a>
 		  </div>
 		   <div class="btn-group" role="group">
-		    <a href="#/about"><button type="button" class="btn btn-default">About</button></a>
+		    <a ui-sref="about"><button type="button" class="btn btn-default">About</button></a>
 		  </div>
 		</div>
 
       </div>
     </div>
-    <div ng-app="myApp">
-      <div ng-view></div>
+    <div>
+      <div ui-view></div>
     </div>
     <div class="footer">
         <h2>(This is the footer -- it'll stick around too)</h2>

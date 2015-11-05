@@ -1,20 +1,24 @@
-var myApp = angular.module('myApp', ['ngRoute'])
+var myApp = angular.module('myApp', ['ui.router'])
 // Config route provider
-.config(function($routeProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'templates/landing.html',
-      controller: 'LandingController',
-    })
-   .when('/content/', {
+.config(function($stateProvider) {
+    $stateProvider
+  .state('/#/', {
+    url:'/landing',
+    templateUrl: 'templates/landing.html',
+    controller: 'LandingController',
+  })
+  .state('content', {
+    url:'/content',
     templateUrl: 'templates/content.html',
     controller: 'ContentController',
   })
-   .when('/about/', {
+  .state('about', {
+    url:'/about',
     templateUrl: 'templates/about.html',
     controller: 'AboutController',
   })
 })
+
 // Landing page controller
 .controller('LandingController', function($scope){
   $scope.number = 20
