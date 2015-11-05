@@ -7,6 +7,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 
 <!-- Add angular route library here -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.js"></script>
+
 
 <script src="js/app.js"></script>
 <link href = "css/app.css" rel="stylesheet" type = "text/css"/>
@@ -18,7 +20,17 @@
     <div class="header">
         <h1>This is the header -- it'll stick around</h1>
         
-        <!-- Add buttons here -->
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+		  <div class="btn-group" role="group">
+		    <a href="#/"><button type="button" class="btn btn-default">Home</button></a>
+		  </div>
+		  <div class="btn-group" role="group">
+		    <a href="#/content"><button type="button" class="btn btn-default">Content</button></a>
+		  </div>
+		   <div class="btn-group" role="group">
+		    <a href="#/about"><button type="button" class="btn btn-default">About</button></a>
+		  </div>
+		</div>
 
       </div>
     </div>
