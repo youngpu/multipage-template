@@ -2,10 +2,10 @@ var myApp = angular.module('myApp', ['ui.router'])
 // Config route provider
 .config(function($stateProvider) {
     $stateProvider
-  .state('/#/', {
-    url:'/landing',
-    templateUrl: 'templates/landing.html',
-    controller: 'LandingController',
+  .state('home', {
+    url:'/',
+    templateUrl: 'templates/home.html',
+    controller: 'HomeController',
   })
   .state('content', {
     url:'/content',
@@ -19,17 +19,17 @@ var myApp = angular.module('myApp', ['ui.router'])
   })
 })
 
-// Landing page controller
-.controller('LandingController', function($scope){
+// Landing page controller: define $scope.number as a number
+.controller('HomeController', function($scope){
   $scope.number = 20
 })
 
-// About page controller
+// About page controller: define $scope.about as a string
 .controller('AboutController', function($scope){
   $scope.about = "Here's some information about this page."
 })
 
-// Content controller
+// Content controller: define $scope.url as an image
 .controller('ContentController', function($scope){
   $scope.url = "http://conference.unavsa.org/wp-content/uploads/2015/06/SEA-pic.jpg"
 })
